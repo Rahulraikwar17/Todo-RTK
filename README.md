@@ -1,12 +1,47 @@
-# React + Vite
+# Todo App — React + Redux Toolkit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal, glassmorphism-styled todo app built with React, Redux Toolkit, and Tailwind CSS. Todos persist in `localStorage`, so your list survives a page refresh.
 
-Currently, two official plugins are available:
+**Live demo:** [todo-rtk-ochre.vercel.app](https://todo-rtk-ochre.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Add, edit, complete, and delete todos
+- Filter by **All / Active / Completed** via a tab switcher
+- Reset/clear all todos with a confirmation prompt
+- Todos persist across sessions using `localStorage`
+- Glassmorphism UI with a soft animated gradient background
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- **React** (Vite)
+- **Redux Toolkit** — global state management
+- **Tailwind CSS** — styling
+- **lucide-react** — icons
+
+## Redux State Shape
+
+```js
+{
+  todo: {
+    todo: [],          // array of { id, title, isComplete }
+    activeTab: "all",  // "all" | "active" | "completed"
+    editTodo: null,    // currently edited todo, or null
+  }
+}
+```
+
+## Available Actions
+
+| Action           | Description                              |
+|------------------|-------------------------------------------|
+| `setTodo`        | Add a new todo                            |
+| `setDeleteTodo`  | Delete a todo by id                       |
+| `setCompleteTodo`| Toggle a todo's completed state           |
+| `setEditTodo`    | Set (or clear) the todo currently editing |
+| `updateTodo`     | Save edits to an existing todo's title    |
+| `setActiveTab`   | Change the active filter tab              |
+| `resetData`      | Clear all todos from state and storage    |
+
+
+
