@@ -2,7 +2,7 @@ import React from "react";
 import AddTodo from "./components/AddTodo";
 import Tabs from "./components/Tabs";
 import { useDispatch, useSelector } from "react-redux";
-import TodoCard from "./components/todoCard";
+import TodoCard from "./components/TodoCard";
 import { ListTodo, Trash2 } from "lucide-react";
 import { resetData } from "./redux/features/todoSlice";
 
