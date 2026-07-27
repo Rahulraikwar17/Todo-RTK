@@ -33,7 +33,7 @@ const TodoCard = ({ elem }) => {
         {elem.title}
       </h1>
 
-      <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+      <div className="flex items-center gap-1 transition-opacity duration-200">
         <button
           onClick={() => dispatch(setEditTodo(elem))}
           className="w-7 h-7 rounded-full flex items-center justify-center text-white/50 hover:bg-white/15 hover:text-white transition-all duration-200"

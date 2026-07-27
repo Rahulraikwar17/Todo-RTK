@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <div
-      className="min-h-screen w-full relative flex items-center justify-center overflow-hidden p-6"
+      className="min-h-screen w-full relative flex items-center justify-center overflow-hidden"
       style={{
         background:
           "radial-gradient(circle at 20% 20%, #4C3A9E 0%, transparent 45%), radial-gradient(circle at 80% 15%, #7A4FC4 0%, transparent 40%), radial-gradient(circle at 85% 85%, #1F8A8C 0%, transparent 45%), linear-gradient(160deg, #1A1233 0%, #2A1B4D 45%, #14352F 100%)",
@@ -77,7 +77,7 @@ const App = () => {
 
         <Tabs />
 
-        <div className="flex flex-col gap-3 min-h-[50vh]">
+        <div className="flex flex-col gap-3 min-h-[20vh]">
           {filteredTodos.length === 0 ? (
             <h1 className="text-center text-white/40">No Todos</h1>
           ) : (
