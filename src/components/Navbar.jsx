@@ -77,7 +77,7 @@ const Navbar = () => {
         </div>
       </div>
       <p
-        className="text-[var(--sub-text)] text-[13px] mb-6"
+        className="text-[#d0d0d0] text-[13px] mb-6"
         style={{ fontFamily: "'Inter', sans-serif" }}
       >
         Stay on top of what matters today
