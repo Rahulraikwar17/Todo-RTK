@@ -27,7 +27,7 @@ const Tabs = () => {
           key={tab.key}
           onClick={() => dispatch(setActiveTab(tab.key))}
           className={`relative z-10 flex-1 py-2 text-[13px] rounded-full transition-colors duration-300 ${
-            activeTab === tab.key ? "text-white" : "text-white/45 hover:text-white/70"
+            activeTab === tab.key ? "text-[var(--text)]" : "text-[var(--sub-text)] hover:text-white/70"
           }`}
           style={{ fontFamily: "'Inter', sans-serif" }}
         >

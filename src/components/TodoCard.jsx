@@ -18,7 +18,7 @@ const TodoCard = ({ elem }) => {
         className={`shrink-0 w-5 h-5 rounded-full border flex items-center justify-center transition-all duration-200 ${
           elem.isComplete
             ? "bg-gradient-to-br from-emerald-400 to-teal-500 border-transparent"
-            : "border-white/25 hover:border-white/50"
+            : "border-[var(--border)] hover:border-white/50"
         }`}
       >
         {elem.isComplete && <Check size={11} className="text-white" strokeWidth={3} />}
@@ -26,7 +26,7 @@ const TodoCard = ({ elem }) => {
 
       <h1
         className={`flex-1 text-[14px] truncate transition-all duration-200 ${
-          elem.isComplete ? "text-white/35 line-through" : "text-white/90"
+          elem.isComplete ? "text-white/35 line-through" : "text-[var(--text)]"
         }`}
         style={{ fontFamily: "'Inter', sans-serif" }}
       >
@@ -36,13 +36,13 @@ const TodoCard = ({ elem }) => {
       <div className="flex items-center gap-1 transition-opacity duration-200">
         <button
           onClick={() => dispatch(setEditTodo(elem))}
-          className="w-7 h-7 rounded-full flex items-center justify-center text-white/50 hover:bg-white/15 hover:text-white transition-all duration-200"
+          className="w-7 h-7 rounded-full flex items-center justify-center text-[var(--sub-text)] hover:bg-white/15 hover:text-white transition-all duration-200"
         >
           <Pencil size={14} />
         </button>
         <button
           onClick={() => dispatch(setDeleteTodo(elem))}
-          className="w-7 h-7 rounded-full flex items-center justify-center text-white/50 hover:bg-white/15 hover:text-red-300 transition-all duration-200"
+          className="w-7 h-7 rounded-full flex items-center justify-center text-[var(--sub-text)] hover:bg-white/15 hover:text-red-300 transition-all duration-200"
         >
           <Trash2 size={14} />
         </button>

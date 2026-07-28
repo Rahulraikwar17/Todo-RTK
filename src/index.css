@@ -3,9 +3,13 @@
 .dark {
   --text: #f1f1f1;
   --sub-text: rgba(255, 255, 255, 0.7);
+  --placeholder: rgba(255, 255, 255, 0.438);
+  --border:rgba(255, 255, 255, 0.438);
 }
 
 .light {
   --text: #1a1f2b;
   --sub-text: #1e1e1e;
+   --placeholder: rgba(76, 75, 75, 0.486);
+   --border:rgba(76, 75, 75, 0.486);
 }

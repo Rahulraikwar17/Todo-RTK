@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ListTodo, Moon, Sun, Trash2 } from "lucide-react";
+import { ListTodo, Moon, Sun, Tornado, Trash2 } from "lucide-react";
 import { resetData } from "../redux/features/todoSlice";
 import { setThemeToggle } from "../redux/features/themeSlice";
 import { AnimatePresence, motion } from "framer-motion";
@@ -17,7 +17,7 @@ const Navbar = () => {
     <>
       <div className="flex items-center justify-between mb-1">
         <h1
-          className="text-[var(--text)] text-[24px] tracking-tight"
+          className="text-[var(--text)] text-[24px] tracking-tight "
           style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600 }}
         >
           Tasks
@@ -77,7 +77,7 @@ const Navbar = () => {
         </div>
       </div>
       <p
-        className="text-[#d0d0d0] text-[13px] mb-6"
+        className="text-[var(--sub-text)] text-[13px] mb-6"
         style={{ fontFamily: "'Inter', sans-serif" }}
       >
         Stay on top of what matters today

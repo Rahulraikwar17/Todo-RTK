@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import TodoCard from "./components/TodoCard";
 import darkBg from "./assets/bgvdo.mp4";
-import lightBg from "./assets/bgvdo2.mp4";
+import lightBg from "./assets/bgvdo3.mp4";
 import { AnimatePresence, motion } from "framer-motion";
 const App = () => {
   const todos = useSelector((state) => state.todo.todo);
@@ -28,6 +28,7 @@ const App = () => {
           loop
           muted
           autoPlay
+          poster="https://images.pexels.com/photos/11568595/pexels-photo-11568595.jpeg"
           className="w-full object-cover h-full"
         ></video>
       </div>
@@ -41,6 +42,7 @@ const App = () => {
           src={`${lightBg}`}
           loop
           muted
+          poster="https://images.pexels.com/photos/11568595/pexels-photo-11568595.jpeg"
           autoPlay
           className="w-full object-cover h-full"
         ></video>
@@ -71,7 +73,7 @@ const App = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="text-center text-white/40"
+                  className="text-center text-[var(--sub-text)]"
                 >
                   No Todos
                 </motion.h1>
