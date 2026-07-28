@@ -9,6 +9,7 @@ const AddTodo = () => {
 
   const dispatch = useDispatch();
   const editTodo = useSelector((state) => state.todo.editTodo);
+  const theme = useSelector((state) => state.theme.mode);
 
   useEffect(() => {
     if (editTodo) {
@@ -51,7 +52,7 @@ const AddTodo = () => {
         onChange={(e) => setTitle(e.target.value)}
         placeholder="What needs doing?"
         className="flex-1 h-12 px-4 rounded-2xl bg-white/8 border border-white/15
-                   text-white placeholder-white/35 text-[14px] outline-none
+                   text-[var(--text)] placeholder-[var(--sub-text)] text-[14px] outline-none
                    focus:border-white/35 focus:bg-white/12 transition-all duration-200"
         style={{ fontFamily: "'Inter', sans-serif" }}
       />
@@ -59,7 +60,7 @@ const AddTodo = () => {
         type="submit"
         aria-label={editTodo ? "Update task" : "Add task"}
         className="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500
-                   flex items-center justify-center text-white
+                   flex items-center justify-center text-[var(--text)]
                    shadow-[0_6px_20px_rgba(168,85,247,0.35)] hover:shadow-[0_8px_24px_rgba(168,85,247,0.5)]
                    hover:scale-[1.04] active:scale-[0.96] transition-all duration-200"
       >
